@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal - MedTask</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f2f1, #e8f5e9);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.logo-medtask {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #004d40;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    margin: 15px 0;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+}
+
+ul li a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #c8e6c9;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #a5d6a7;
+    text-decoration: underline;
+}
+
+
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Menú Principal</h2>
+        <img src="/img/logo.png" alt="Logo MedTask" class="logo-medtask">
+        <ul>
+            <li><a href="/triaje">Formulario de Triaje</a></li>
+            <li><a href="/hospitales">Ver Hospitales</a></li>
+            <li><a href="/privacidad">Política de Privacidad</a></li>
+        </ul>
+    </div>
+    <div class="button-group">
+        <a href="javascript:history.back()" class="btn">← Volver</a>
+        <a href="/login" class="btn">Cerrar sesión</a>
+    </div>
+    
+</body>
+</html>

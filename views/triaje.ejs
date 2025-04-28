@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Triaje - MedTask</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #00695c;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .btn {
+            padding: 12px;
+            background-color: #2bc4ad;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #239b8b;
+        }
+        .button-group {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo-medtask {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Triaje</h2>
+        <img src="/img/logo.png" alt="Logo MedTask" class="logo-medtask">
+        <form action="/triaje" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" required>
+
+            <label for="sintomas">Síntomas principales:</label>
+            <textarea id="sintomas" name="sintomas" rows="4" required></textarea>
+
+            <label for="urgencia">¿Cómo consideras tu estado?</label>
+            <select id="urgencia" name="urgencia" required>
+                <option value="leve">Leve</option>
+                <option value="moderado">Moderado</option>
+                <option value="grave">Grave</option>
+            </select>
+
+            <label for="cronico">¿Tienes enfermedades crónicas?</label>
+            <input type="checkbox" id="cronico" name="cronico"> Sí
+
+            <label for="fiebre">¿Has tenido fiebre en las últimas 24h?</label>
+            <input type="radio" id="fiebre-si" name="fiebre" value="sí" required> Sí
+            <input type="radio" id="fiebre-no" name="fiebre" value="no"> No
+
+            <button type="submit" class="btn">Enviar Triaje</button>
+        </form>
+
+        <div class="button-group">
+            <a href="/menu" class="btn">← Volver al menú</a>
+        </div>
+    </div>
+</body>
+</html>

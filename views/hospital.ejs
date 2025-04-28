@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospitales Cercanos - MedTask</title>
+    <img src="/img/logo.png" alt="Logo MedTask" class="logo-medtask">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        #map {
+            height: 500px;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .logo-medtask {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hospitales Cercanos</h2>
+        <div id="map"></div>
+
+        <div class="button-group">
+            <a href="/menu" class="btn">← Volver al menú</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([40.4168, -3.7038], 12); // Centro en Madrid
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const hospitales = [
+            { nombre: 'Hospital Universitario La Paz', lat: 40.4781, lon: -3.6884 },
+            { nombre: 'Hospital General Gregorio Marañón', lat: 40.4216, lon: -3.6765 },
+            { nombre: 'Hospital Clínico San Carlos', lat: 40.4365, lon: -3.7237 },
+            { nombre: 'Hospital 12 de Octubre', lat: 40.3774, lon: -3.6916 }
+        ];
+
+        hospitales.forEach(h => {
+            L.marker([h.lat, h.lon]).addTo(map)
+                .bindPopup(`<strong>${h.nombre}</strong>`);
+        });
+    </script>
+</body>
+</html>

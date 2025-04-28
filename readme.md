@@ -83,13 +83,13 @@ MedTask está diseñado bajo el principio de **privacidad desde el diseño**:
 
 ## 👥 Equipo de desarrollo
 
-- [Nombre 1]
-- [Nombre 2]
-- [Nombre 3]
+- Iván Seco Martín
+- Mario Suárez del Hierro
+- Javier Poza Garijo
 
 ---
 
 ## 📄 Licencia
 
-Proyecto realizado para fines educativos en el marco de [Nombre del curso o asignatura].  
+Proyecto realizado para fines educativos en el marco de Universidad Camilo Jose Cela.  
 **No destinado a uso comercial**.

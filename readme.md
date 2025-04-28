@@ -23,7 +23,6 @@ El proyecto integra principios de **protección de datos** (RGPD y LOPDGDD) desd
 - **Estructura de carpetas:**
   - `/public/` — Recursos estáticos (CSS, imágenes, PDF).
   - `/views/` — Vistas EJS.
-  - `/routes/` — (En evolución para rutas avanzadas).
   - `app.js` — Archivo principal de configuración del servidor.
 
 ---

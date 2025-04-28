@@ -11,7 +11,7 @@ El proyecto integra principios de **protección de datos** (RGPD y LOPDGDD) desd
 - Formulario de triaje para registrar síntomas.
 - Mapa interactivo con localización de hospitales.
 - Consulta de la política de privacidad de forma accesible.
-- Interfaz adaptada a dispositivos móviles.
+
 
 ---
 

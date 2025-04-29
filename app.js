@@ -11,6 +11,6 @@ app.get('/login', (req, res) => res.render('login'));
 app.get('/menu', (req, res) => res.render('menu'));
 app.get('/privacidad', (req, res) => res.render('privacidad'));
 app.get('/triaje', (req, res) => res.render('triaje'));
-app.get('/hospitales', (req, res) => res.render('hospitales'));
+app.get('/hospitales', (req, res) => res.render('hospital'));
 
 module.exports = app;
